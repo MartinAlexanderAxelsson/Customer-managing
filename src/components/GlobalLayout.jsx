@@ -163,36 +163,6 @@ export default function GlobalLayout({ children }) {
         ))}
       </BlinkBoxCont>
       <Main>{children}</Main>
-
-      <footer></footer>
-
-      {/* {token && (
-        <nav>
-          <p>Logo</p>
-          <ul>
-            <li>Customers</li>
-            <button onClick={handleLogout}>Log out</button>
-            {user.firstName && user.lastName && (
-              <li>
-                <p>Signed in as</p>
-                <p>
-                  {user.firstName} {user.lastName}
-                </p>
-                <p>{user.email}</p>
-              </li>
-            )}
-          </ul>
-        </nav>
-      )}
-      {!token && (
-        <nav>
-          <p>Logo</p>
-          <ul>
-            <li>Login</li>
-          </ul>
-        </nav>
-      )}
-      <main>{children}</main> */}
-    </div>
+</div>
   )
 }
