@@ -15,7 +15,7 @@ const CreateCustomerContainer = styled.div`
   background: rgb(235, 235, 208);
   width: 400px;
   height: fit-content;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   border-radius: 5px;
 `
 const CreateCustomerH2 = styled.h2`
@@ -34,7 +34,7 @@ const CreateCustomerForm = styled.form`
 `
 const CreateCustomerLabels = styled.label``
 const CreateCustomerInputs = styled.input`
-background: rgb(235, 235, 208);
+  background: rgb(235, 235, 208);
   margin: 5px;
   padding: 7px;
   width: 250px;
@@ -43,11 +43,12 @@ background: rgb(235, 235, 208);
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   border: none;
-  box-shadow:inset -2px -2px 0px 0px rgb(248, 248, 224), -2px -2px 0px 0px rgb(180, 180, 153);
+  box-shadow: inset -2px -2px 0px 0px rgb(248, 248, 224),
+    -2px -2px 0px 0px rgb(180, 180, 153);
 `
 const CreateCustomerBtn = styled.button`
-background: rgb(228, 228, 194);
-color: rgb(148, 148, 108);
+  background: rgb(228, 228, 194);
+  color: rgb(148, 148, 108);
   align-self: center;
   margin-top: 20px;
   width: 100px;
@@ -57,14 +58,17 @@ color: rgb(148, 148, 108);
   font-weight: 900;
   font-size: 20px;
   border: none;
-  box-shadow:inset -2px -2px 0px 0px rgb(180, 180, 153), -2px -2px 0px 0px rgb(248, 248, 224);
+  box-shadow: inset -2px -2px 0px 0px rgb(180, 180, 153),
+    -2px -2px 0px 0px rgb(248, 248, 224);
   &:active {
-    box-shadow:inset -2px -2px 0px 0px rgb(248, 248, 224), -2px -2px 0px 0px rgb(180, 180, 153);
+    box-shadow: inset -2px -2px 0px 0px rgb(248, 248, 224),
+      -2px -2px 0px 0px rgb(180, 180, 153);
   }
 `
 
 const CustomerListContainer = styled(CreateCustomerContainer)`
-padding-bottom:10px;`
+  padding-bottom: 10px;
+`
 const CustomerListH2 = styled(CreateCustomerH2)``
 const CustomerListText = styled.p`
   font-family: "Nunito", sans-serif;
@@ -134,10 +138,9 @@ export default function HomePage() {
       </CreateCustomerLabels>
     )
   }
-  
+
   useEffect(() => {
     fetchClients()
-
   }, [])
   return (
     <div>
@@ -160,7 +163,7 @@ export default function HomePage() {
             {renderInputs("text", "Email", email, setEmail)}
             {renderInputs("text", "PhoneNumber", phoneNumber, setPhoneNumber)}
 
-            <CreateCustomerBtn onClick={handleCreateCustomer}>
+            <CreateCustomerBtn type="submit">
               Add
             </CreateCustomerBtn>
           </CreateCustomerForm>
